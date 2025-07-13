@@ -1,5 +1,3 @@
-# Job Relevance Rating System
-
 # 🔍 Job Relevance Rating System (AI-Powered)
 
 This project is an **AI-based job rating engine** built using `sentence-transformers` in **Google Colab**. It helps evaluate how relevant a job is to a user based on their prompt (interests, background, skills, or experience) and the job's description/title.
