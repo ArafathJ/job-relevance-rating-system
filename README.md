@@ -1,6 +1,7 @@
 # 🔍 Job Relevance Rating System (AI-Powered)
 
-This project is an **AI-based job rating engine** built using `sentence-transformers` in **Google Colab**. It helps evaluate how relevant a job is to a user based on their prompt (interests, background, skills, or experience) and the job's description/title.
+This project is an **AI-based job rating engine** built using `sentence-transformers` in **Google Colab**.
+It helps evaluate how relevant a job is to a user based on their prompt (interests, background, skills, or experience) and the job's description/title.
 
 ---
 
@@ -22,17 +23,21 @@ This project is an **AI-based job rating engine** built using `sentence-transfor
   "job_name": "Data Scientist",
   "job_description": "Looking for someone with strong math/stats skills, data analysis, and experience with real-world ML projects."
 }
-
-Relevance Score: 4.1 / 5
 ```
-# 📁 How It Works
- ## Input
+
+> Relevance Score: 4.1 / 5
+
+---
+
+## 📁 How It Works
+
+#### Input
 
 User provides a career prompt
 
 Job name and description are collected (manually or from web scraping)
 
-## Processing
+#### Processing
 
 Prompt and job info are embedded using sentence-transformers
 
@@ -40,62 +45,69 @@ Cosine similarity is used to compute semantic closeness
 
 Optional: Gemini API enhances the prompt by extracting structured skills
 
-## Output
+#### Output
 
 A single float value indicating how relevant the job is to the user
 
-# 🧱 Stack
+---
 
-🐍 Python
+## 🧱 Stack
 
-🤗 SentenceTransformers
+- 🐍 Python
+- 🤗 SentenceTransformers
+- 🧠 Gemini API (optional)
+- 📓 Google Colab (for development and testing)
 
-🧠 Gemini API (optional)
+---
 
-📓 Google Colab (for development and testing)
+## 💡 Use Cases
 
-# 💡 Use Cases
+- Job match scoring engine
+- Career recommender system
+- Resume alignment tools
+- LLM-to-job search integration
 
-Job match scoring engine
+---
 
-Career recommender system
-
-Resume alignment tools
-
-LLM-to-job search integration
-
-# 🚀 Getting Started
+## 🚀 Getting Started
 
 1. Open in Colab
 
 2. Install dependencies
+```sh
 pip install sentence-transformers
 pip install google-generativeai  # Optional for Gemini support
+```
 
-3. Run the notebook and modify the rate_job() function with your input.
+4. Run the notebook and modify the `rate_job()` function with your input.
 
-   
-📌 Optional: Gemini Prompt Structuring
+
+📌 **Optional:** Gemini Prompt Structuring
 To improve rating accuracy, you can structure vague user prompts using Google's Gemini API:
 
+> **Example:** The following is the user prompt. Please extract 5–10 key skills for job matching: {user_prompt}
 
- Example
-"The following is the user prompt. Please extract 5–10 key skills for job matching: {user_prompt}"
+---
 
+## 🤖 Future Ideas
 
-# 🤖 Future Ideas
-Connect with real-time job listings (e.g., web scraping from Indeed)
+- Connect with real-time job listings (e.g., web scraping from Indeed)
+- Add FastAPI or Flask API endpoint
+- Build frontend (e.g., Streamlit or React) for users to upload and get scores
 
-Add FastAPI or Flask API endpoint
+---
 
-Build frontend (e.g., Streamlit or React) for users to upload and get scores
-
-📝 License
+## 📝 License
 Open-source for research and educational use. Please credit this repository if reused.
 
-🙌 Contributing
+---
+
+## 🙌 Contributing
 Got ideas to improve this? Want to integrate it into your app? PRs and feedback are welcome!
 
-📬 Contact
+---
+
+## 📬 Contact
 Feel free to reach out if you're building something cool with this!
 
+---
